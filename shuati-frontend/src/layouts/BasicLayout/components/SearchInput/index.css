@@ -1,0 +1,15 @@
+.search-input {
+  display: flex;
+  align-items: center;
+  margin-inline-end: 16px;
+}
+
+.search-input .ant-input-affix-wrapper,
+.search-input .ant-input-search-button {
+  border-radius: 999px !important;
+}
+
+.search-input .ant-input-affix-wrapper {
+  min-width: 250px;
+  box-shadow: var(--shadow-soft);
+}

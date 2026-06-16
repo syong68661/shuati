@@ -1,0 +1,28 @@
+# frontend
+shuati-frontend/node_modules/
+shuati-frontend/.next/
+shuati-frontend/out/
+shuati-frontend/dist/
+
+# backend
+shuati-backend/target/
+shuati-backend/.idea/
+shuati-backend/*.log
+shuati-backend/.flattened-pom.xml
+
+# local tools / large artifacts
+tools/
+*.mp4
+
+# env / secret
+**/.env
+**/.env.local
+**/application-prod.yml
+**/application-prod.yaml
+**/secrets.yml
+
+# editor / system
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,28 @@
+.question-table {
+  padding: 22px;
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  background: var(--surface-card);
+  box-shadow: var(--shadow-soft);
+}
+
+.question-table .ant-pro-card,
+.question-table .ant-pro-table,
+.question-table .ant-card {
+  background: transparent !important;
+}
+
+.question-table .ant-pro-query-filter {
+  padding-inline: 0;
+}
+
+.question-table .ant-table-thead > tr > th {
+  color: var(--text-light) !important;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.question-table .ant-table-tbody > tr > td {
+  color: var(--text-main);
+}

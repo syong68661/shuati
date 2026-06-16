@@ -1,0 +1,112 @@
+.basic-layout-shell {
+  min-height: 100vh;
+  overflow: auto;
+  background:
+    radial-gradient(circle at top left, var(--page-accent-soft) 0, transparent 28%),
+    radial-gradient(circle at top right, var(--page-accent-soft-2) 0, transparent 24%),
+    var(--page-bg);
+}
+
+.ant-pro-layout .ant-pro-layout-content {
+  padding: 24px 20px 96px !important;
+}
+
+.ant-pro-layout-top {
+  height: 100%;
+}
+
+#basicLayout .ant-pro-layout {
+  background: transparent;
+}
+
+#basicLayout .ant-pro-layout-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 72px;
+  padding-inline: 24px;
+  backdrop-filter: blur(18px);
+  background: var(--header-bg) !important;
+  border-bottom: 1px solid var(--border-soft);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+#basicLayout .ant-pro-layout-header-fixed-header {
+  box-shadow: none;
+}
+
+#basicLayout .ant-pro-top-nav-header-main {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.basic-layout-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-strong);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.basic-layout-action-link,
+.theme-toggle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  background: var(--surface-raised);
+  color: var(--text-main) !important;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s ease;
+}
+
+.basic-layout-action-link:hover,
+.theme-toggle-button:hover {
+  color: var(--brand-primary) !important;
+  border-color: var(--brand-primary-soft);
+  transform: translateY(-1px);
+}
+
+#basicLayout .ant-menu.ant-menu-root {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+#basicLayout .ant-menu-overflow-item {
+  margin-inline: 4px !important;
+}
+
+#basicLayout .ant-menu-title-content,
+#basicLayout .ant-pro-top-nav-header-logo h1 {
+  color: var(--text-strong);
+}
+
+#basicLayout .ant-menu-item {
+  border-radius: 999px !important;
+  color: var(--text-muted) !important;
+}
+
+#basicLayout .ant-menu-item-selected {
+  background: var(--brand-primary-soft) !important;
+  color: var(--brand-primary) !important;
+}
+
+#basicLayout .ant-pro-global-footer {
+  margin-top: 24px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .ant-pro-layout .ant-pro-layout-content {
+    padding-inline: 14px !important;
+  }
+
+  #basicLayout .ant-pro-layout-header {
+    padding-inline: 12px;
+  }
+}

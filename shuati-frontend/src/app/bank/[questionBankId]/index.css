@@ -1,0 +1,60 @@
+#bankPage {
+  gap: 24px;
+}
+
+.bank-hero-card {
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.bank-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.bank-hero-cover {
+  overflow: hidden;
+  border-radius: 24px;
+  min-height: 240px;
+  background: linear-gradient(135deg, rgba(255, 161, 22, 0.16), rgba(14, 165, 233, 0.16));
+}
+
+.bank-hero-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bank-hero-tag {
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--brand-primary-soft);
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+.bank-hero-title {
+  margin-bottom: 12px !important;
+  color: var(--text-strong) !important;
+}
+
+.bank-hero-description {
+  color: var(--text-muted) !important;
+  line-height: 1.9;
+}
+
+.bank-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .bank-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}

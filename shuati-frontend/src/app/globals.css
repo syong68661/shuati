@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  color-scheme: light;
+  --page-bg: #f7f8fb;
+  --page-bg-elevated: #ffffff;
+  --page-accent-soft: rgba(255, 161, 22, 0.16);
+  --page-accent-soft-2: rgba(14, 165, 233, 0.12);
+  --header-bg: rgba(247, 248, 251, 0.78);
+  --surface-card: rgba(255, 255, 255, 0.88);
+  --surface-raised: rgba(255, 255, 255, 0.95);
+  --surface-hero: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 248, 238, 0.98));
+  --border-soft: rgba(15, 23, 42, 0.08);
+  --brand-primary: #ffa116;
+  --brand-primary-soft: rgba(255, 161, 22, 0.16);
+  --brand-secondary: #0ea5e9;
+  --text-strong: #1f2937;
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --shadow-soft: 0 16px 50px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 22px 60px rgba(15, 23, 42, 0.1);
+  --home-grid-border: rgba(148, 163, 184, 0.18);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --page-bg: #0f1115;
+  --page-bg-elevated: #171a21;
+  --page-accent-soft: rgba(255, 161, 22, 0.16);
+  --page-accent-soft-2: rgba(34, 211, 238, 0.08);
+  --header-bg: rgba(15, 17, 21, 0.8);
+  --surface-card: rgba(23, 26, 33, 0.92);
+  --surface-raised: rgba(28, 32, 41, 0.96);
+  --surface-hero: linear-gradient(135deg, rgba(27, 31, 39, 0.96), rgba(37, 27, 16, 0.94));
+  --border-soft: rgba(148, 163, 184, 0.14);
+  --brand-primary: #ffa116;
+  --brand-primary-soft: rgba(255, 161, 22, 0.18);
+  --brand-secondary: #22d3ee;
+  --text-strong: #f8fafc;
+  --text-main: #d5dde8;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+  --shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.24);
+  --shadow-card: 0 22px 70px rgba(0, 0, 0, 0.32);
+  --home-grid-border: rgba(148, 163, 184, 0.12);
+}
+
+html,
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text-main);
+  font-family:
+    "IBM Plex Sans",
+    "Segoe UI",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.max-width-content {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 32px;
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  background: var(--surface-hero);
+  box-shadow: var(--shadow-card);
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -80px -120px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--brand-primary-soft) 0, transparent 70%);
+}
+
+.page-hero-title {
+  margin: 0 !important;
+  color: var(--text-strong) !important;
+}
+
+.page-hero-subtitle {
+  margin-top: 12px;
+  max-width: 760px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.glass-card {
+  border: 1px solid var(--border-soft) !important;
+  background: var(--surface-card) !important;
+  box-shadow: var(--shadow-soft) !important;
+  backdrop-filter: blur(16px);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  margin: 0 !important;
+  color: var(--text-strong) !important;
+}
+
+.section-link {
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+.section-link:hover {
+  color: var(--brand-primary);
+}
+
+.ant-card {
+  border-color: var(--border-soft) !important;
+  background: var(--surface-card);
+}
+
+.ant-card .ant-card-head {
+  border-bottom-color: var(--border-soft);
+}
+
+.ant-card .ant-card-head-title,
+.ant-typography,
+.ant-list-item-meta-title,
+.ant-list-item-meta-description {
+  color: inherit !important;
+}
+
+.ant-btn-default {
+  border-color: var(--border-soft);
+  background: var(--surface-raised);
+  color: var(--text-main);
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector {
+  border-color: var(--border-soft) !important;
+  background: var(--surface-raised) !important;
+}
+
+.ant-input::placeholder {
+  color: var(--text-light);
+}
+
+.ant-table-wrapper .ant-table,
+.ant-table-wrapper .ant-table-container table > thead > tr:first-child > * {
+  background: transparent !important;
+}
+
+.ant-list-split .ant-list-item {
+  border-bottom-color: var(--border-soft);
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 22px 20px;
+    border-radius: 22px;
+  }
+}
